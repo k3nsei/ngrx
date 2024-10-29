@@ -4,9 +4,9 @@
   "description": "monorepo for ngrx development",
   "scripts": {
     "ng": "ng",
-    "build": "NX_NATIVE_LOGGING=nx::native::cache,nx::native::db NX_DAEMON=false nx run-many --target=build --all",
+    "build": "NX_NATIVE_LOGGING=nx::native::cache,nx::native::db NX_DAEMON=false nx run-many --target=build --all --verbose",
     "deploy:builds": "ts-node ./build/deploy-build.ts",
-    "test": "NX_NATIVE_LOGGING=nx::native::cache,nx::native::db NX_DAEMON=false nx run-many --target=test --all",
+    "test": "NX_NATIVE_LOGGING=nx::native::cache,nx::native::db NX_DAEMON=false nx run-many --target=test --all --verbose",
     "clean": "git clean -xdf",
     "coverage:html": "nyc report --reporter=html",
     "copy:dist": "ncp dist/ ./node_modules/@ngrx/",
@@ -23,7 +23,7 @@
     "update:check": "ng update",
     "update:versions": "ts-node ./build/update-version-numbers.ts",
     "postupdate:versions": "npm run changelog",
-    "lint": "NX_NATIVE_LOGGING=nx::native::cache,nx::native::db NX_DAEMON=false nx run-many --target=lint --all",
+    "lint": "NX_NATIVE_LOGGING=nx::native::cache,nx::native::db NX_DAEMON=false nx run-many --target=lint --all --verbose",
     "eslint-plugin:update": "ts-node ./build/generate-eslint-plugin.ts"
   },
   "engines": {
@@ -196,7 +196,7 @@
     "lodash": "^4.17.11"
   },
   "volta": {
-    "node": "22.10.0",
+    "node": "22.11.0",
     "npm": "10.9.0",
     "yarn": "1.22.22"
   }

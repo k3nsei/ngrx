@@ -4,7 +4,7 @@ RUN apt-get update -yq && \
     apt-get upgrade -yq && \
     apt-get install ca-certificates curl gnupg2 unzip zip jq -yq
 
-ENV NODE_VERSION 22.10.0
+ENV NODE_VERSION 22.11.0
 ENV NPM_VERSION 10.9.0
 ENV YARN_VERSION 1.22.22
 
